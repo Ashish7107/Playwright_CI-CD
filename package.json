@@ -1,0 +1,22 @@
+{
+  "name": "playwright_ci-cd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashish7107/Playwright_CI-CD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashish7107/Playwright_CI-CD/issues"
+  },
+  "homepage": "https://github.com/Ashish7107/Playwright_CI-CD#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.4"
+  }
+}
