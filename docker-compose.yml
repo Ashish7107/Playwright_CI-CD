@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  playwright:
+    build: .
+    volumes:
+      # Mount test results for easy access
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+      # Mount tests directory for development (optional)
+      - ./tests:/app/tests
+    environment:
+      # Set CI environment for better performance
+      - CI=true
+      # Disable color output for better log readability
+      - FORCE_COLOR=0
+    ports:
+      # Expose Playwright UI port
+      - "9323:9323"
+    # Override default command for development
+    command: ["npx", "playwright", "test", "--headed", "--ui"] 

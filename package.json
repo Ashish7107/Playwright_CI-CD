@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "docker:build": "docker build -t playwright-tests .",
+    "docker:run": "docker run --rm playwright-tests",
+    "docker:run:headed": "docker run --rm playwright-tests npx playwright test --headed",
+    "docker:dev": "docker-compose up --build",
+    "docker:clean": "docker-compose down --volumes --remove-orphans"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ashish7107/Playwright_CI-CD.git"
